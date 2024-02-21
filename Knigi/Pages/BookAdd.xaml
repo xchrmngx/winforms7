@@ -1,0 +1,34 @@
+﻿<Window x:Class="Knigi.Pages.BookAdd"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Knigi.Pages"
+        mc:Ignorable="d"
+        Title="BookAdd" Height="450" Width="800" Closing="Window_Closing">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="42*"/>
+            <RowDefinition Height="377*"/>
+        </Grid.RowDefinitions>
+        <Label x:Name="Addbook" Content="Добавить книгу" HorizontalAlignment="Center" Grid.Row="0" FontSize="20" FontWeight="Bold" Width="168" Height="42" Margin="312,0" VerticalAlignment="Bottom"/>
+        <ComboBox x:Name="NameAt" HorizontalAlignment="Right" Margin="0,0,606,310" Grid.Row="1" DisplayMemberPath="Автор" Text="{Binding Автор}" VerticalAlignment="Bottom" Width="120"/>
+        <ComboBox x:Name="Janr" HorizontalAlignment="Right" Margin="0,0,606,282" Grid.Row="1" DisplayMemberPath="Вид" Text="{Binding Вид}" VerticalAlignment="Bottom" Width="120"/>
+        <TextBox x:Name="NameB" HorizontalAlignment="Right" Height="23" Margin="0,0,606,254" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="120"/>
+        <TextBox x:Name="InfoB" HorizontalAlignment="Right" Height="23" Margin="0,0,606,226" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="120"/>
+        <TextBox x:Name="PriceB" HorizontalAlignment="Right" Height="23" Margin="0,0,606,198" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="120"/>
+        <Button x:Name="UploadB" Content="Загрузить" HorizontalAlignment="Right" Margin="0,0,576,174" Grid.Row="1" VerticalAlignment="Bottom" Width="120" Click="UploadB_Click"/>
+        <Button x:Name="Dobav" Content="Добавить" HorizontalAlignment="Right" Margin="0,0,12,15" Grid.Row="1" VerticalAlignment="Bottom" Width="74" Click="Dobav_Click"/>
+        <Label Content="Автор:" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,730,309" Grid.Row="1"/>
+        <Label Content="Жанр:" HorizontalAlignment="Right" Margin="0,0,731,281" Grid.Row="1" Height="26" VerticalAlignment="Bottom"/>
+        <Label Content="Название:" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,722,253" Grid.Row="1" Width="66"/>
+        <Label Content="Описание:" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,725,227" Grid.Row="1"/>
+        <Label Content="Цена:" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,729,197" Grid.Row="1"/>
+        <Label Content="Изображение:" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,698,173" Grid.Row="1" Height="24"/>
+        <Image x:Name="PhotoB" HorizontalAlignment="Right" Height="230" Margin="0,0,29,129" Grid.Row="1" VerticalAlignment="Bottom" Width="152"/>
+        <Label Content="ID" HorizontalAlignment="Right" Margin="0,0,731,333" Grid.Row="1" VerticalAlignment="Bottom" RenderTransformOrigin="-9.636,-4.192"/>
+        <TextBox x:Name="IDBok" HorizontalAlignment="Right" Height="23" Margin="0,0,606,337" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="120" IsEnabled="False"/>
+
+
+    </Grid>
+</Window>
